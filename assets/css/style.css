@@ -1,0 +1,40 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1D1E23;
+}
+h1
+{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+h1 span
+{
+    position: relative;
+    color: #53d3ed;
+}
+h1 span::before
+{
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    height: 30px;
+    width: 2px;
+    background: #53d3ed;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+h1 span.stop-blinking::before
+{
+    animation:none;
+}
+@keyframes blink{
+    50% {
+        opacity: 0;
+    }
+}
